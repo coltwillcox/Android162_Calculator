@@ -8,8 +8,9 @@ import android.view.ViewGroup;
 
 public class FragmentDisplay extends Fragment {
 
+    // Required empty public constructor.
     public FragmentDisplay() {
-        // Required empty public constructor
+
     }
 
     @Override

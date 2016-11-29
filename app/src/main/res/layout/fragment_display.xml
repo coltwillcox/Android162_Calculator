@@ -1,12 +1,33 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.koltinjo.android162_calculator.FragmentDisplay">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorLight"
+                android:elevation="@dimen/fragment_display_elevation"
+                android:paddingBottom="@dimen/fragment_display_padding"
+                android:paddingTop="@dimen/fragment_display_padding"
+                tools:context="com.koltinjo.android162_calculator.FragmentDisplay">
 
-    <TextView
+    <ImageButton
+            android:id="@+id/fragment_display_imagebutton_delete"
+            android:layout_width="@dimen/fragment_display_imagebutton"
+            android:layout_height="@dimen/fragment_display_imagebutton"
+            android:src=""/>
+
+    <HorizontalScrollView
+            android:id="@+id/fragment_display_horizontalscrollview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="@dimen/fragment_display_horizontalscrollview"
+            android:layout_toEndOf="@id/fragment_display_imagebutton_delete"
+            android:layout_toRightOf="@id/fragment_display_imagebutton_delete">
 
-</FrameLayout>
+        <TextView
+                android:id="@+id/fragment_display_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                tools:text="927*89"/>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

@@ -8,8 +8,9 @@ import android.view.ViewGroup;
 
 public class FragmentInput extends Fragment {
 
+    // Constructor.
     public FragmentInput() {
-        // Required empty public constructor
+
     }
 
     @Override
