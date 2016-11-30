@@ -12,6 +12,9 @@ import butterknife.OnClick;
 
 public class FragmentInput extends Fragment {
 
+    // Instance of Presenter.
+    private Contract.ForwardInputInteractionToPresenter forwardInput;
+
     // Required empty public constructor.
     public FragmentInput() {
 
@@ -42,24 +45,29 @@ public class FragmentInput extends Fragment {
             R.id.fragment_input_button_3, R.id.fragment_input_button_4, R.id.fragment_input_button_5,
             R.id.fragment_input_button_6, R.id.fragment_input_button_7, R.id.fragment_input_button_8,
             R.id.fragment_input_button_9})
-    public void onNumberClick(Button button) {
-
+    public void onClickNumber(Button button) {
+        forwardInput.onClickNumber(Integer.parseInt(button.getText().toString()));
     }
 
     @OnClick({R.id.fragment_input_button_add, R.id.fragment_input_button_subtract, R.id.fragment_input_button_multiply,
             R.id.fragment_input_button_divide})
-    public void onOperatorClick(Button button) {
-
+    public void onClickOperator(Button button) {
+        forwardInput.onClickOperator(button.getText().toString());
     }
 
     @OnClick(R.id.fragment_input_button_decimal)
-    public void onDecimalClick(Button button) {
-
+    public void onClickDecimal(Button button) {
+        forwardInput.onClickDecimal();
     }
 
     @OnClick(R.id.fragment_input_button_evaluate)
-    public void onEvaluateClick(Button button) {
+    public void onClickEvaluate(Button button) {
+        forwardInput.onClickEvaluate();
+    }
 
+    // Setter.
+    public void setPresenter(Contract.ForwardInputInteractionToPresenter forwardInput) {
+        this.forwardInput = forwardInput;
     }
 
 }
