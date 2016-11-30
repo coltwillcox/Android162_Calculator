@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NumberPadButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorLight</item>
+        <item name="android:background">@drawable/numberpad_button</item>
+        <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="OperationPadButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorLight</item>
+        <item name="android:background">@drawable/operationpad_button</item>
+        <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="DisplayImageButton" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="android:alpha">.54</item>
+        <item name="android:background">@drawable/display_button</item>
+    </style>
+    
+    <style name="DisplayTextView">
+        <item name="android:textSize">@dimen/display_textview_textsize</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="DisplayScrollView">
+        <item name="android:paddingLeft">@dimen/display_scrollview_padding</item>
+        <item name="android:paddingRight">@dimen/display_scrollview_padding</item>
+    </style>
+
+</resources>
