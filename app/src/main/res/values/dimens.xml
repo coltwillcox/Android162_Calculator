@@ -1,12 +1,8 @@
 <resources>
 
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="fragment_display_padding">24dp</dimen>
     <dimen name="fragment_display_elevation">4dp</dimen>
     <dimen name="fragment_input_elevation">1dp</dimen>
     <dimen name="fragment_display_imagebutton">72dp</dimen>
-    <dimen name="fragment_display_horizontalscrollview">72dp</dimen>
     <dimen name="button_textsize">34sp</dimen>
     <dimen name="display_textview_textsize">56sp</dimen>
     <dimen name="display_scrollview_padding">16dp</dimen>

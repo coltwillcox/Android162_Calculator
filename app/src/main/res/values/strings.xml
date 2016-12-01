@@ -1,7 +1,8 @@
 <resources>
 
-    <string name="app_name">Android162_Calculator</string>
+    <string name="app_name">Cincilator</string>
     <string name="input_invalid">"Invalid input!"</string>
     <string name="expression_empty">"Expression empty!"</string>
     <string name="expression_long">"Expression too long!"</string>
+
 </resources>
