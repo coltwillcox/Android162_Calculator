@@ -4,7 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:elevation="@dimen/fragment_input_elevation"
-              tools:context="com.koltinjo.android162_calculator.FragmentInput">
+              tools:context="com.koltinjo.cincilator.FragmentInput">
 
     <LinearLayout
             android:layout_width="match_parent"

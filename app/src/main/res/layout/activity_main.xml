@@ -6,14 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.koltinjo.android162_calculator.ActivityMain">
+        tools:context="com.koltinjo.cincilator.ActivityMain">
 
     <fragment
             android:id="@+id/activity_main_fragment_display"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:name="com.koltinjo.android162_calculator.FragmentDisplay"
+            android:name="com.koltinjo.cincilator.FragmentDisplay"
             tools:layout="@layout/fragment_display"/>
 
     <fragment
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="4"
-            android:name="com.koltinjo.android162_calculator.FragmentInput"
+            android:name="com.koltinjo.cincilator.FragmentInput"
             tools:layout="@layout/fragment_input"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.koltinjo.android162_calculator;
+package com.koltinjo.cincilator;
 
 /**
  * Created by colt on 30.11.2016.

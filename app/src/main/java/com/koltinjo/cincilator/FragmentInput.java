@@ -1,4 +1,4 @@
-package com.koltinjo.android162_calculator;
+package com.koltinjo.cincilator;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

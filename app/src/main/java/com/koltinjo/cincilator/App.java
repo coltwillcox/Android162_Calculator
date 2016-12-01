@@ -1,4 +1,4 @@
-package com.koltinjo.android162_calculator;
+package com.koltinjo.cincilator;
 
 import android.app.Application;
 import android.content.Context;

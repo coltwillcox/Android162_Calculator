@@ -1,9 +1,9 @@
-package com.koltinjo.android162_calculator;
+package com.koltinjo.cincilator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-// TODO App name.
+// TODOK App name.
 // TODO Icon.
 // TODO Options.
 // TODO Options: Commas.
