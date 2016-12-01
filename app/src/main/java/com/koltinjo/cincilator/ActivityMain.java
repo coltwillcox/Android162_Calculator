@@ -13,6 +13,7 @@ import android.os.Bundle;
 // TODO Save currentExpression on config change.
 // TODO Multiple "=" presses.
 // TODO Sciemtific look? Options?
+// TODO Move fragments from Main. Set presenter inside fragments.
 
 // https://youtu.be/pjTAF53qRA4?list=PLEVlop6sMHCp3Wp0mqT2-OxHwVdAod1uy
 public class ActivityMain extends AppCompatActivity {
