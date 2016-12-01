@@ -10,6 +10,14 @@ public class ActivityMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FragmentInput fragmentInput = (FragmentInput) getSupportFragmentManager().findFragmentById(R.id.activity_main_fragment_input);
+        FragmentDisplay fragmentDisplay = (FragmentDisplay) getSupportFragmentManager().findFragmentById(R.id.activity_main_fragment_display);
+
+        Presenter presenter = new Presenter(fragmentDisplay);
+
+        fragmentDisplay.setPresenter(presenter);
+        fragmentInput.setPresenter(presenter);
     }
 
 }

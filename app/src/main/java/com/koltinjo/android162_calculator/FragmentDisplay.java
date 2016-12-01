@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -52,16 +53,16 @@ public class FragmentDisplay extends Fragment implements Contract.PublishToView 
     // Interface methods.
     @Override
     public void showResult(String result) {
-
+        fragmentDisplayTextView.setText(result);
     }
 
     @Override
     public void showToast(String message) {
-
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
 
     // Setter.
-    public void setPresenter(Contract.ForwardDisplayInteractionToPresenter fowardDisplay) {
+    public void setPresenter(Contract.ForwardDisplayInteractionToPresenter forwardDisplay) {
         this.forwardDisplay = forwardDisplay;
     }
 

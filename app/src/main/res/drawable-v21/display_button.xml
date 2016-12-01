@@ -4,8 +4,7 @@
         android:color="@color/colorAccent">
 
     <item>
-        <!--TODO Doesnt show ripple with trans color.-->
-        <color android:color="@android:color/transparent"/>
+        <color android:color="@color/colorLight"/>
     </item>
 
 </ripple>

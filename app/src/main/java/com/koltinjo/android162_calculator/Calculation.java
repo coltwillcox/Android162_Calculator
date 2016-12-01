@@ -3,6 +3,8 @@ package com.koltinjo.android162_calculator;
 import org.javia.arity.Symbols;
 import org.javia.arity.SyntaxException;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by colt on 30.11.2016.
  */
@@ -13,10 +15,17 @@ public class Calculation {
     private final Symbols symbols;
     private static String currentExpression;
     private CalculationResult calculationResult;
+    private DecimalFormat decimalFormat;
 
     // Constructor.
     public Calculation() {
         symbols = new Symbols();
+        decimalFormat = new DecimalFormat("###,###,###,##0.##########");
+    }
+
+    // Interface.
+    interface CalculationResult{
+        void onExpressionChange(String result, boolean successful);
     }
 
     // Delete a single character from currentExpression, unless empty.
@@ -46,7 +55,7 @@ public class Calculation {
             if (currentExpression.length() > 16) {
                 calculationResult.onExpressionChange(App.getContext().getString(R.string.expression_long), false);
             } else {
-                // TODO currentExpression += number;
+                currentExpression += number;
                 calculationResult.onExpressionChange(currentExpression, true);
             }
         }
@@ -72,8 +81,9 @@ public class Calculation {
     public void performEvaluate() {
         if (validateExpression()) {
             try {
+                currentExpression = currentExpression.replace(",", "");
                 Double result = symbols.eval(currentExpression);
-                currentExpression = Double.toString(result);
+                currentExpression = decimalFormat.format(result);
                 calculationResult.onExpressionChange(currentExpression, true);
             } catch (SyntaxException e) {
                 calculationResult.onExpressionChange(App.getContext().getString(R.string.input_invalid), false);
@@ -103,10 +113,5 @@ public class Calculation {
         this.calculationResult = calculationResult;
         currentExpression = "";
     }
-
-    interface CalculationResult{
-        void onExpressionChange(String result, boolean successful);
-    }
-
 
 }
