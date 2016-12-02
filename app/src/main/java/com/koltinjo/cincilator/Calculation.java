@@ -98,7 +98,23 @@ public class Calculation {
 
     // Helper method to validate expression.
     private boolean validateExpression(String symbol) {
-        if (currentExpression.endsWith("+") || currentExpression.endsWith("-") || currentExpression.endsWith("*") || currentExpression.endsWith("/")) {
+        if (symbol.equals("sin") ||
+                symbol.equals("cos") ||
+                symbol.equals("tan") ||
+                symbol.equals("ln") ||
+                symbol.equals("log") ||
+                symbol.equals("!") ||
+                symbol.equals("π") ||
+                symbol.equals("e") ||
+                symbol.equals("^") ||
+                symbol.equals("(") ||
+                symbol.equals(")") ||
+                symbol.equals("√")) {
+            return true;
+        } else if (currentExpression.endsWith("+") ||
+                currentExpression.endsWith("-") ||
+                currentExpression.endsWith("*") ||
+                currentExpression.endsWith("/")) {
             calculationResult.onExpressionChange(App.getContext().getString(R.string.input_invalid), false);
             return false;
         } else if (currentExpression.isEmpty() && !symbol.equals("-")) {

@@ -16,12 +16,10 @@
             android:name="com.koltinjo.cincilator.FragmentDisplay"
             tools:layout="@layout/fragment_display"/>
 
-    <fragment
-            android:id="@+id/activity_main_fragment_input"
+    <android.support.v4.view.ViewPager
+            android:id="@+id/activity_main_viewpager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
-            android:name="com.koltinjo.cincilator.FragmentInput"
-            tools:layout="@layout/fragment_input"/>
+            android:layout_weight="4"/>
 
 </LinearLayout>

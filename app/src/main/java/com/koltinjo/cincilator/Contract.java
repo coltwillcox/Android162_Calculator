@@ -13,7 +13,7 @@ public interface Contract {
         void showToast(String message);
     }
 
-    // Passes click events from View (FragmentInput) to the Presenter.
+    // Passes click events from View (FragmentInputSimple) to the Presenter.
     interface ForwardInputInteractionToPresenter {
         void onClickNumber(int number);
         void onClickOperator(String operator);

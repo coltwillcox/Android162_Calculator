@@ -1,0 +1,142 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:elevation="@dimen/fragment_input_elevation"
+        tools:context="com.koltinjo.cincilator.FragmentInputSci">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/fragment_input_sci_button_sin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="sin"
+                style="@style/OperationPadButton"/>
+
+        <Button
+
+                android:id="@+id/fragment_input_sci_button_cos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="cos"
+                style="@style/OperationPadButton"/>
+
+        <Button
+                android:id="@+id/fragment_input_sci_button_tan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="tan"
+                style="@style/OperationPadButton"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/fragment_input_sci_button_ln"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="ln"
+                style="@style/OperationPadButton"/>
+
+        <Button
+
+                android:id="@+id/fragment_input_sci_button_log"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="log"
+                style="@style/OperationPadButton"/>
+
+        <Button
+                android:id="@+id/fragment_input_sci_button_factorial"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="!"
+                style="@style/OperationPadButton"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/fragment_input_sci_button_pi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="π"
+                style="@style/OperationPadButton"/>
+
+        <Button
+
+                android:id="@+id/fragment_input_sci_button_e"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="e"
+                style="@style/OperationPadButton"/>
+
+        <Button
+                android:id="@+id/fragment_input_sci_button_power"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="^"
+                style="@style/OperationPadButton"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/fragment_input_sci_button_bracket_open"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="("
+                style="@style/OperationPadButton"/>
+
+        <Button
+
+                android:id="@+id/fragment_input_sci_button_bracker_close"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text=")"
+                style="@style/OperationPadButton"/>
+
+        <Button
+                android:id="@+id/fragment_input_sci_button_root"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="√"
+                style="@style/OperationPadButton"/>
+
+    </LinearLayout>
+
+</LinearLayout>

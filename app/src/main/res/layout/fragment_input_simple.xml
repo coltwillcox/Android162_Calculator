@@ -1,10 +1,11 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:elevation="@dimen/fragment_input_elevation"
-              tools:context="com.koltinjo.cincilator.FragmentInput">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:elevation="@dimen/fragment_input_elevation"
+        tools:context="com.koltinjo.cincilator.FragmentInputSimple">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -13,7 +14,7 @@
             android:orientation="horizontal">
 
         <Button
-                android:id="@+id/fragment_input_button_7"
+                android:id="@+id/fragment_input_simple_button_7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -22,7 +23,7 @@
 
         <Button
 
-                android:id="@+id/fragment_input_button_8"
+                android:id="@+id/fragment_input_simple_button_8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -30,7 +31,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_9"
+                android:id="@+id/fragment_input_simple_button_9"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -38,7 +39,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_divide"
+                android:id="@+id/fragment_input_simple_button_divide"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -54,7 +55,7 @@
             android:orientation="horizontal">
 
         <Button
-                android:id="@+id/fragment_input_button_4"
+                android:id="@+id/fragment_input_simple_button_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -62,7 +63,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_5"
+                android:id="@+id/fragment_input_simple_button_5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -70,7 +71,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_6"
+                android:id="@+id/fragment_input_simple_button_6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -78,7 +79,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_multiply"
+                android:id="@+id/fragment_input_simple_button_multiply"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -94,7 +95,7 @@
             android:orientation="horizontal">
 
         <Button
-                android:id="@+id/fragment_input_button_1"
+                android:id="@+id/fragment_input_simple_button_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -102,7 +103,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_2"
+                android:id="@+id/fragment_input_simple_button_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -110,7 +111,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_3"
+                android:id="@+id/fragment_input_simple_button_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -118,7 +119,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_subtract"
+                android:id="@+id/fragment_input_simple_button_subtract"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -134,7 +135,7 @@
             android:orientation="horizontal">
 
         <Button
-                android:id="@+id/fragment_input_button_0"
+                android:id="@+id/fragment_input_simple_button_0"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -142,7 +143,7 @@
                 style="@style/NumberPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_decimal"
+                android:id="@+id/fragment_input_simple_button_decimal"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -150,7 +151,7 @@
                 style="@style/OperationPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_evaluate"
+                android:id="@+id/fragment_input_simple_button_evaluate"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -158,7 +159,7 @@
                 style="@style/OperationPadButton"/>
 
         <Button
-                android:id="@+id/fragment_input_button_add"
+                android:id="@+id/fragment_input_simple_button_add"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

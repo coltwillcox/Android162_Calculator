@@ -10,7 +10,8 @@
             android:theme="@style/AppTheme"
             android:name="com.koltinjo.cincilator.App">
 
-        <activity android:name="com.koltinjo.cincilator.ActivityMain">
+        <activity android:name="com.koltinjo.cincilator.ActivityMain"
+                  android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
