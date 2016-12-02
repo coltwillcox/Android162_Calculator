@@ -1,6 +1,5 @@
 package com.koltinjo.cincilator;
 
-import android.util.Log;
 import org.javia.arity.Symbols;
 import org.javia.arity.SyntaxException;
 
@@ -88,7 +87,6 @@ public class Calculation {
             try {
                 currentExpression = currentExpression.replace(",", "");
                 Double result = symbols.eval(currentExpression);
-                Log.d("oiram", result + "");
                 currentExpression = decimalFormat.format(result);
                 calculationResult.onExpressionChange(currentExpression, true);
             } catch (SyntaxException e) {

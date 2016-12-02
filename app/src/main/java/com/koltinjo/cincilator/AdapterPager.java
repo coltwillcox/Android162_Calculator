@@ -1,5 +1,6 @@
 package com.koltinjo.cincilator;
 
+import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -21,6 +22,11 @@ public class AdapterPager extends FragmentStatePagerAdapter {
         fragmentInputSci = new FragmentInputSci();
         fragmentInputSimple.setPresenter(this.presenter);
         fragmentInputSci.setPresenter(this.presenter);
+    }
+
+    @Override
+    public float getPageWidth(int position) {
+        return App.getContext().getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT ? 1f : position == 0 ? .57f : .43f;
     }
 
     @Override

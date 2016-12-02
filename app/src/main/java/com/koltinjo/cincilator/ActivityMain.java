@@ -1,5 +1,6 @@
 package com.koltinjo.cincilator;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 // TODOK Icon.
 // TODOK Save currentExpression on config change. http://stackoverflow.com/questions/3915952/how-to-save-state-during-orientation-change-in-android-if-the-state-is-made-of-m
 // TODOK Scientific look? Options?
-// TODO TextView autosize.
+// TODOK TextView autosize.
 // TODO Options.
 // TODO Options: Commas.
 // TODO Options: Vibrations.
@@ -21,6 +22,7 @@ import android.support.v7.app.AppCompatActivity;
 public class ActivityMain extends AppCompatActivity {
 
     private ViewPager activityMainViewPager;
+    private AdapterPager adapterPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +33,17 @@ public class ActivityMain extends AppCompatActivity {
         Presenter presenter = new Presenter(fragmentDisplay);
         fragmentDisplay.setPresenter(presenter);
 
+        adapterPager = new AdapterPager(getSupportFragmentManager(), presenter);
+
         activityMainViewPager = (ViewPager) findViewById(R.id.activity_main_viewpager);
-        activityMainViewPager.setAdapter(new AdapterPager(getSupportFragmentManager(), presenter));
+        activityMainViewPager.setAdapter(adapterPager);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        activityMainViewPager.setAdapter(null);
+        activityMainViewPager.setAdapter(adapterPager);
     }
 
 }
