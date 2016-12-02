@@ -4,6 +4,8 @@ import org.javia.arity.Symbols;
 import org.javia.arity.SyntaxException;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 /**
  * Created by colt on 30.11.2016.
@@ -20,11 +22,13 @@ public class Calculation {
     // Constructor.
     public Calculation() {
         symbols = new Symbols();
-        decimalFormat = new DecimalFormat("###,###,###,##0.##########");
+
+        decimalFormat = (DecimalFormat) NumberFormat.getNumberInstance(Locale.US);
+        decimalFormat.applyPattern("###,###,###,##0.##########");
     }
 
     // Interface.
-    interface CalculationResult{
+    interface CalculationResult {
         void onExpressionChange(String result, boolean successful);
     }
 
@@ -63,7 +67,7 @@ public class Calculation {
 
     // Append operator "+-*/" to currentExpression.
     public void appendOperator(String operator) {
-        if (validateExpression()) {
+        if (validateExpression(operator)) {
             currentExpression += operator;
             calculationResult.onExpressionChange(currentExpression, true);
         }
@@ -71,7 +75,7 @@ public class Calculation {
 
     // Append decimal sign to currentExpression.
     public void appendDecimal() {
-        if (validateExpression()) {
+        if (validateExpression("")) {
             currentExpression += ".";
             calculationResult.onExpressionChange(currentExpression, true);
         }
@@ -79,7 +83,7 @@ public class Calculation {
 
     // If currentExpression passes checks, pass currentExpression to symbols object, and return the result.
     public void performEvaluate() {
-        if (validateExpression()) {
+        if (validateExpression("")) {
             try {
                 currentExpression = currentExpression.replace(",", "");
                 Double result = symbols.eval(currentExpression);
@@ -93,11 +97,11 @@ public class Calculation {
     }
 
     // Helper method to validate expression.
-    private boolean validateExpression() {
+    private boolean validateExpression(String symbol) {
         if (currentExpression.endsWith("+") || currentExpression.endsWith("-") || currentExpression.endsWith("*") || currentExpression.endsWith("/")) {
             calculationResult.onExpressionChange(App.getContext().getString(R.string.input_invalid), false);
             return false;
-        } else if (currentExpression.isEmpty()) {
+        } else if (currentExpression.isEmpty() && !symbol.equals("-")) {
             calculationResult.onExpressionChange(App.getContext().getString(R.string.expression_empty), false);
             return false;
         } else if (currentExpression.length() > 16) {

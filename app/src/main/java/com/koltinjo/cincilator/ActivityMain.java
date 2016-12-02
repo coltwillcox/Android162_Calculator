@@ -4,13 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 // TODOK App name.
-// TODO Icon.
+// TODOK Icon.
 // TODO Options.
 // TODO Options: Commas.
 // TODO Options: Vibrations.
 // TODO Options: Sounds.
 // TODO Options: Decimal size.
 // TODO Save currentExpression on config change.
+// TODO TextView autosize.
 // TODO Multiple "=" presses.
 // TODO Sciemtific look? Options?
 // TODO Move fragments from Main. Set presenter inside fragments.
