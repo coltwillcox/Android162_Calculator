@@ -5,6 +5,5 @@
     <dimen name="fragment_display_imagebutton">72dp</dimen>
     <dimen name="button_textsize">34sp</dimen>
     <dimen name="display_textview_textsize">56sp</dimen>
-    <dimen name="display_scrollview_padding">16dp</dimen>
 
 </resources>

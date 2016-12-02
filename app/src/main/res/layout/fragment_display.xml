@@ -15,23 +15,15 @@
             android:src="@drawable/ic_clear_black_48dp"
             style="@style/DisplayImageButton"/>
 
-    <HorizontalScrollView
-            android:id="@+id/fragment_display_horizontalscrollview"
+    <com.koltinjo.cincilator.views.AutoResizeTextView
+            android:id="@+id/fragment_display_textview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
+            android:layout_gravity="end"
             android:layout_toEndOf="@id/fragment_display_imagebutton_delete"
             android:layout_toRightOf="@id/fragment_display_imagebutton_delete"
-            style="@style/DisplayScrollView">
-
-        <TextView
-                android:id="@+id/fragment_display_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                tools:text="927*89"
-                style="@style/DisplayTextView"/>
-
-    </HorizontalScrollView>
+            tools:text="927*89"
+            style="@style/DisplayTextView"/>
 
 </RelativeLayout>

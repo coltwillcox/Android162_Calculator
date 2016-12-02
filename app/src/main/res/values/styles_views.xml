@@ -15,18 +15,15 @@
 
     <style name="DisplayImageButton" parent="Base.Widget.AppCompat.ImageButton">
         <item name="android:alpha">.54</item>
+        <item name="android:tint">@color/colorDark</item>
         <item name="android:background">@drawable/display_button</item>
     </style>
 
     <style name="DisplayTextView">
         <item name="android:textSize">@dimen/display_textview_textsize</item>
         <item name="android:gravity">center_vertical|right</item>
-        <item name="android:maxLines">1</item>
-    </style>
-    
-    <style name="DisplayScrollView">
-        <item name="android:paddingLeft">@dimen/display_scrollview_padding</item>
-        <item name="android:paddingRight">@dimen/display_scrollview_padding</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:textColor">@color/colorDark</item>
     </style>
 
 </resources>

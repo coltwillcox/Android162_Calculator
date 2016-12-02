@@ -7,14 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 // TODOK App name.
 // TODOK Icon.
 // TODOK Save currentExpression on config change. http://stackoverflow.com/questions/3915952/how-to-save-state-during-orientation-change-in-android-if-the-state-is-made-of-m
+// TODOK Scientific look? Options?
+// TODO TextView autosize.
 // TODO Options.
 // TODO Options: Commas.
 // TODO Options: Vibrations.
 // TODO Options: Sounds.
 // TODO Options: Decimal size.
-// TODO TextView autosize.
 // TODO Multiple "=" presses.
-// TODO Scientific look? Options?
 // TODO Move fragments from Main. Set presenter inside fragments.
 
 // https://youtu.be/pjTAF53qRA4?list=PLEVlop6sMHCp3Wp0mqT2-OxHwVdAod1uy

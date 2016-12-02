@@ -1,5 +1,6 @@
 package com.koltinjo.cincilator;
 
+import android.util.Log;
 import org.javia.arity.Symbols;
 import org.javia.arity.SyntaxException;
 
@@ -14,6 +15,7 @@ import java.util.Locale;
 // Model.
 public class Calculation {
 
+    private final int EXPRESSION_LENGTH_MAX = 100;
     private final Symbols symbols;
     private static String currentExpression;
     private CalculationResult calculationResult;
@@ -22,9 +24,8 @@ public class Calculation {
     // Constructor.
     public Calculation() {
         symbols = new Symbols();
-
         decimalFormat = (DecimalFormat) NumberFormat.getNumberInstance(Locale.US);
-        decimalFormat.applyPattern("###,###,###,##0.##########");
+        decimalFormat.applyPattern("###,##0.##########");
     }
 
     // Interface.
@@ -53,10 +54,10 @@ public class Calculation {
 
     // Append number to currentExpression if valid.
     public void appendNumber(String number) {
-        if (currentExpression.startsWith("0") && number.equals("0")) {
+        if (currentExpression.equals("0") && number.equals("0")) {
             calculationResult.onExpressionChange(App.getContext().getString(R.string.input_invalid), false);
         } else {
-            if (currentExpression.length() > 16) {
+            if (currentExpression.length() > EXPRESSION_LENGTH_MAX) {
                 calculationResult.onExpressionChange(App.getContext().getString(R.string.expression_long), false);
             } else {
                 currentExpression += number;
@@ -87,6 +88,7 @@ public class Calculation {
             try {
                 currentExpression = currentExpression.replace(",", "");
                 Double result = symbols.eval(currentExpression);
+                Log.d("oiram", result + "");
                 currentExpression = decimalFormat.format(result);
                 calculationResult.onExpressionChange(currentExpression, true);
             } catch (SyntaxException e) {
@@ -98,7 +100,10 @@ public class Calculation {
 
     // Helper method to validate expression.
     private boolean validateExpression(String symbol) {
-        if (symbol.equals("sin") ||
+        if (currentExpression.length() > EXPRESSION_LENGTH_MAX) {
+            calculationResult.onExpressionChange(App.getContext().getString(R.string.expression_long), false);
+            return false;
+        } else if (symbol.equals("sin") ||
                 symbol.equals("cos") ||
                 symbol.equals("tan") ||
                 symbol.equals("ln") ||
@@ -119,9 +124,6 @@ public class Calculation {
             return false;
         } else if (currentExpression.isEmpty() && !symbol.equals("-")) {
             calculationResult.onExpressionChange(App.getContext().getString(R.string.expression_empty), false);
-            return false;
-        } else if (currentExpression.length() > 16) {
-            calculationResult.onExpressionChange(App.getContext().getString(R.string.expression_long), false);
             return false;
         } else {
             return true;
